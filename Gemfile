@@ -29,8 +29,29 @@ gem 'jwt'
 # gem 'rack-cors'
 
 group :development, :test do
+  gem 'database_cleaner'
+
+  # Rspec
+  gem 'rspec'
+  gem 'rspec-rails'
+  gem 'rspec_api_documentation'
+  gem 'simplecov'
+  gem 'shoulda-matchers', git: 'https://github.com/thoughtbot/shoulda-matchers.git'
+  gem 'factory_bot'
+  gem 'factory_bot_rails'
+
+  # Rubocop
+  gem 'rubocop'
+  gem 'rubocop-rspec'
+  gem 'rubocop-packaging'
+  gem 'guard-rubocop'
+  gem 'rubocop-rails'
+
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+
+  # Test security of the app (run bundle exec brakeman)
+  gem 'brakeman'
 end
 
 group :development do
