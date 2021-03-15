@@ -28,3 +28,6 @@
 
 # Ignore vendors directory.
 /vendors/*
+
+# Ignore coverage reports.
+/coverage/*
