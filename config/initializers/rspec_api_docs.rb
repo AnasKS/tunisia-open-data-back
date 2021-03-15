@@ -1,3 +1,5 @@
+return unless Rails.env.test?
+
 module RspecApiDocumentation
   class RackTestClient < ClientBase
     def response_body
