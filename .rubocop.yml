@@ -1,0 +1,18 @@
+AllCops:
+  NewCops: enable
+  Include:
+    - app/**/*
+    - lib/**/*
+    - spec/**/*
+  Exclude:
+    - db/migrate/*
+    - db/schema.rb
+    - db/seeds.rb
+    - Gemfile
+    - Gemfile.lock
+    - bin/*
+    - vendors/**/*
+    - Rakefile
+    - config.ru
+    - config/**/*
+  TargetRubyVersion: 2.7
