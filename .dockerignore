@@ -1,0 +1,11 @@
+.git
+.bundle
+coverage
+vendors
+storage
+spec
+log
+tmp
+test
+docker-compose.yml
+data/
