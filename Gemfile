@@ -29,6 +29,9 @@ gem 'jwt'
 # gem 'rack-cors'
 
 group :development, :test do
+  # Annotate models with their associate database table schema (bundle exec annotate --models)
+  gem 'annotate'
+
   gem 'database_cleaner'
 
   # Rspec
@@ -58,6 +61,9 @@ group :development do
   gem 'listen', '~> 3.3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  # Generate Databse graph (run rails erd)
+  gem 'rails-erd'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
