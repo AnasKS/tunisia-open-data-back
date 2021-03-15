@@ -30,5 +30,5 @@
 /vendors/*
 
 # Ignore coverage reports.
-/coverage/*
+/coverage/
 /spec/examples.txt
