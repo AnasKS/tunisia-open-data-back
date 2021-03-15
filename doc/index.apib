@@ -17,4 +17,21 @@ FORMAT: 1A
 
     + Body
 
-            [binary data]
+            {
+              "data": [
+                {
+                  "id": "8674",
+                  "type": "cities",
+                  "links": {
+                    "self": "http://example.org/v1/cities/8674"
+                  },
+                  "attributes": {
+                    "name": "Tatouine"
+                  }
+                }
+              ],
+              "links": {
+                "first": "http://example.org/v1/cities?page%5Bnumber%5D=1&page%5Bsize%5D=20",
+                "last": "http://example.org/v1/cities?page%5Bnumber%5D=1&page%5Bsize%5D=20"
+              }
+            }
