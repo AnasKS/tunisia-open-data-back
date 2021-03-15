@@ -7,3 +7,4 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 cities = City.create([{ name: "Tunis"},{ name: "Sfax" }])
+users = User.create([{ email: 'test.admin@test.com', role: 'admin'}])
