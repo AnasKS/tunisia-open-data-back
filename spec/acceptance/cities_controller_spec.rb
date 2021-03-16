@@ -3,6 +3,7 @@
 require 'rails_helper'
 require 'rspec_api_documentation/dsl'
 
+# rubocop:disable Metrics/BlockLength
 resource 'Cities' do
   # SEE: /spec/support/api_basic_context.rb
   include_context 'api basic context'
@@ -16,7 +17,7 @@ resource 'Cities' do
   header 'Authorization', :auth_token
 
   before do
-    @city = create :city, name: "Tunis"
+    @city = create :city, name: 'Tunis'
   end
 
   route '/v1/cities', 'Cities Collection' do
@@ -48,11 +49,11 @@ resource 'Cities' do
       let(:id) { @city.id }
       before do
         @payload = {
-          'data': {
-            'id': id,
-            'type': 'cities',
-            'attributes': {
-              'name': 'Sfax'
+          data: {
+            id: id,
+            type: 'cities',
+            attributes: {
+              name: 'Sfax'
             }
           }
         }
@@ -81,3 +82,4 @@ resource 'Cities' do
     end
   end
 end
+# rubocop:enable Metrics/BlockLength

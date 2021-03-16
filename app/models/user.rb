@@ -1,9 +1,21 @@
+# frozen_string_literal: true
+
+# == Schema Information
+#
+# Table name: users
+#
+#  id         :bigint           not null, primary key
+#  email      :string
+#  role       :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
 class User < ApplicationRecord
   after_initialize :set_defaults
-  
+
   ROLES = [
     USER = 'user',
-    ADMIN = 'admin',
+    ADMIN = 'admin'
   ].freeze
 
   # validations

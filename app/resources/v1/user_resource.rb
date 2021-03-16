@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
-class V1::UserResource < V1::BaseResource
-  attributes :email, :role
+module V1
+  class UserResource < V1::BaseResource
+    attributes :email, :role
+  end
 end

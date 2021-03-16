@@ -2,7 +2,6 @@ AllCops:
   NewCops: enable
   Include:
     - app/**/*
-    - lib/**/*
     - spec/**/*
   Exclude:
     - db/migrate/*
@@ -15,4 +14,6 @@ AllCops:
     - Rakefile
     - config.ru
     - config/**/*
+    - data/**/*
+    - spec/examples.txt
   TargetRubyVersion: 2.7
