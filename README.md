@@ -30,4 +30,4 @@
 ```
 
 - After getting a valid token, one must call the api with http requests including a bearer token as an authorization token.
-- curl -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImVtYWlsIjoiYW5hcy5rc2liaUBnbWFpbC5jb20ifX0.iOC8sFHXe95rI3xw25HYvpQPWmfEEvldPomyMSFFbBY" http://0.0.0.0:3000/v1/cities
+- curl -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImVtYWlsIjoiYW5hcy5rc2liaUBnbWFpbC5jb20ifX0.iOC8sFHXe95rI3xw25HYvpQPWmfEEvldPomyMSFFbBY" https://tunisia-open-data-back.herokuapp.com/v1/cities
