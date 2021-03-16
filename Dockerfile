@@ -1,4 +1,9 @@
-FROM ruby:2.7.0
+FROM ruby:2.7.2
+
+ARG RAILS_ENV
+ARG RAILS_PORT
+ENV RAILS_ENV $RAILS_ENV
+ENV RAILS_PORT $RAILS_PORT
 
 RUN apt-get update -y
 RUN apt-get install postgresql-client -y
@@ -29,6 +34,6 @@ COPY lib $INSTALL_PATH/lib
 RUN chown -R 10000 $INSTALL_PATH
 USER 10000
 
-EXPOSE 3000
+EXPOSE $RAILS_PORT
 
 CMD ["./entrypoint.sh"]
