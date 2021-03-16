@@ -17,3 +17,17 @@
 # Heroku
 - View project logs: `heroku logs --app  tunisia-open-data-back`
 - Migrate database project: `heroku run rake db:seed --app tunisia-open-data-back`
+
+# Using the API:
+
+- In order to use the api, one should generate a valid token. One can obtain a valid `jwt` through this website: [https://jwt.io/]. In the example select `HS256` algorithm, and in the payload data, construct a json in the following format:
+```
+{
+	'user': {
+		'email': 'anas.ksibi@gmail.com'
+	}
+}
+```
+
+- After getting a valid token, one must call the api with http requests including a bearer token as an authorization token.
+- curl -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImVtYWlsIjoiYW5hcy5rc2liaUBnbWFpbC5jb20ifX0.iOC8sFHXe95rI3xw25HYvpQPWmfEEvldPomyMSFFbBY" http://0.0.0.0:3000/v1/cities
