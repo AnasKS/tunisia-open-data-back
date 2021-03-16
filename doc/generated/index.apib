@@ -1,0 +1,115 @@
+# Group Cities
+
+## Cities Collection [/v1/cities]
+
+### Show cities [GET]
+
++ Request Show cities (application/vnd.api+json)
+
+    + Headers
+
+            Accept: application/vnd.api+json
+            Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjp7ImVtYWlsIjoiZmFtZS1lbWFpbC05MDAwMDFAdGVzdC5jb20ifX0.789tqKxAN1GiZDz1Oxnt900ZLDDGcimZasl2AJ-ZZLY
+
++ Response 200 ()
+
+    + Body
+
+            {
+              "data": [
+                {
+                  "id": "29",
+                  "type": "cities",
+                  "links": {
+                    "self": "http://example.org/v1/cities/29"
+                  },
+                  "attributes": {
+                    "name": "Tunis"
+                  }
+                }
+              ],
+              "links": {
+                "first": "http://example.org/v1/cities?page%5Bnumber%5D=1&page%5Bsize%5D=20",
+                "last": "http://example.org/v1/cities?page%5Bnumber%5D=1&page%5Bsize%5D=20"
+              }
+            }
+
+## City [/v1/cities/{id}]
+
++ Parameters
+  + id (required) - City id
+
+### Show City [GET]
+
++ Request Show city (application/vnd.api+json)
+
+    + Headers
+
+            Accept: application/vnd.api+json
+            Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjp7ImVtYWlsIjoiZmFtZS1lbWFpbC05MDAwMDJAdGVzdC5jb20ifX0.bF4peqOSfpg7cw_NQxAK3h83UjMaNsUY4O8bP-bHD-Y
+
++ Response 200 ()
+
+    + Body
+
+            {
+              "data": {
+                "id": "30",
+                "type": "cities",
+                "links": {
+                  "self": "http://example.org/v1/cities/30"
+                },
+                "attributes": {
+                  "name": "Tunis"
+                }
+              }
+            }
+
+### Update City [PUT]
+
++ Request Update city name (application/vnd.api+json)
+
+    + Headers
+
+            Accept: application/vnd.api+json
+            Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjp7ImVtYWlsIjoiZmFtZS1lbWFpbC05MDAwMDNAdGVzdC5jb20ifX0.dICYmZR4Cs-HNiwMDmMIFejWim8xeeceyX-K3Mx99Jc
+
+    + Body
+
+            {
+              "data": {
+                "id": 31,
+                "type": "cities",
+                "attributes": {
+                  "name": "Sfax"
+                }
+              }
+            }
+
++ Response 200 ()
+
+    + Body
+
+            {
+              "data": {
+                "id": "31",
+                "type": "cities",
+                "links": {
+                  "self": "http://example.org/v1/cities/31"
+                },
+                "attributes": {
+                  "name": "Sfax"
+                }
+              }
+            }
+
+### Delete City [DELETE]
+
++ Request Delete city (application/vnd.api+json)
+
+    + Headers
+
+            Accept: application/vnd.api+json
+            Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjp7ImVtYWlsIjoiZmFtZS1lbWFpbC05MDAwMDRAdGVzdC5jb20ifX0.Do8aPAjJhVrFmJup6ezr7nksoP5Qv3UhoGx2TZd3_zk
+
++ Response 204 ()
