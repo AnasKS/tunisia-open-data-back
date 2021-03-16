@@ -1,15 +1,17 @@
 version: '2'
 
 services:
-  crdb:
-    image: cockroachdb/cockroach:v20.1.8
-    command: start --insecure
-    ports:
-      - '8083:8080'
-      - '26257:26257'
+  db:
+    image: postgres
+    hostname: db
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
     volumes:
-      - './data/cockroach:/cockroach/cockroach-data'
-
+      - /data:/var/lib/postgresql
+    ports:
+      - '5432:5432'
   api:
     build:
       context: .
@@ -29,4 +31,4 @@ services:
       - './entrypoint.sh:/home/api/entrypoint.sh'
       - './storage:/home/api/storage'
     depends_on:
-     - crdb
+     - db
