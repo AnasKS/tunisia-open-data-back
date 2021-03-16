@@ -256,8 +256,6 @@ GEM
       rexml
     ruby-progressbar (1.11.0)
     ruby2_keywords (0.0.4)
-    sentry-raven (3.1.1)
-      faraday (>= 1.0)
     shellany (0.0.1)
     simplecov (0.21.2)
       docile (~> 1.1)
@@ -303,7 +301,6 @@ DEPENDENCIES
   rack-cors
   rails (~> 6.1.2, >= 6.1.2.1)
   rails-erd
-  railties
   rspec
   rspec-rails
   rspec_api_documentation
@@ -311,7 +308,6 @@ DEPENDENCIES
   rubocop-packaging
   rubocop-rails
   rubocop-rspec
-  sentry-raven
   shoulda-matchers!
   simplecov
   spring
