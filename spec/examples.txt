@@ -1,3 +1,6 @@
-example_id                                         | status | run_time        |
--------------------------------------------------- | ------ | --------------- |
-./spec/acceptance/city_controller_spec.rb[1:1:1:1] | passed | 0.05174 seconds |
+example_id                                           | status | run_time        |
+---------------------------------------------------- | ------ | --------------- |
+./spec/acceptance/cities_controller_spec.rb[1:1:1:1] | passed | 0.08401 seconds |
+./spec/acceptance/cities_controller_spec.rb[1:2:1:1] | passed | 0.01425 seconds |
+./spec/acceptance/cities_controller_spec.rb[1:2:2:1] | passed | 0.0186 seconds  |
+./spec/acceptance/cities_controller_spec.rb[1:2:3:1] | passed | 0.01587 seconds |
