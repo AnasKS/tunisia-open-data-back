@@ -41,7 +41,6 @@ class BasePolicy
   end
 
   # Visibility scope
-  # by default: empty query is returned
   class Scope
     attr_reader :user, :scope
 

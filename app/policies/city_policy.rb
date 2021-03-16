@@ -10,15 +10,15 @@ class CityPolicy < BasePolicy
   end
 
   def create?
-    true
+    user.admin?
   end
 
   def update?
-    true
+    user.admin?
   end
 
   def destroy?
-    true
+    user.admin?
   end
 
   def show?
@@ -26,10 +26,10 @@ class CityPolicy < BasePolicy
   end
 
   def new?
-    true
+    user.admin?
   end
 
   def edit?
-    true
+    user.admin?
   end
 end
