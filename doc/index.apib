@@ -1,37 +1,9 @@
 FORMAT: 1A
+HOST: https://tunisia-open-data-back.herokuapp.com/
+
 # Tunisia Open Data API
 
-# Group Cities
 
-## Cities Collection [/v1/cities]
-
-### get cities [GET]
-
-+ Request get cities. (application/vnd.api+json)
-
-    + Headers
-
-            Accept: application/vnd.api+json
-
-+ Response 200 ()
-
-    + Body
-
-            {
-              "data": [
-                {
-                  "id": "8674",
-                  "type": "cities",
-                  "links": {
-                    "self": "http://example.org/v1/cities/8674"
-                  },
-                  "attributes": {
-                    "name": "Tatouine"
-                  }
-                }
-              ],
-              "links": {
-                "first": "http://example.org/v1/cities?page%5Bnumber%5D=1&page%5Bsize%5D=20",
-                "last": "http://example.org/v1/cities?page%5Bnumber%5D=1&page%5Bsize%5D=20"
-              }
-            }
+<!-- include(auth.apib) -->
+<!-- include(error.apib) -->
+<!-- include(generated/index.apib) -->

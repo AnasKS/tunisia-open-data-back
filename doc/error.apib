@@ -1,0 +1,85 @@
+## Group Error Responses
+
+### Response 400
+
++ Response 400 (application/json)
+
+
+    "errors": [
+        {
+            "title": "Bad Request",
+            "detail": "Syntax error, example: 785: unexpected token at '}'",
+            "code": 400,
+            "status": 400
+        }
+    ]
+
+### Response 401
+
+All routes can answer a 401 on authentification issues.
+
++ Response 401 (application/json)
+
+
+    "errors": [
+        {
+            "title": "Expired Token",
+            "detail": "Expired Bearer token.",
+            "code": 401,
+            "status": 401
+        }
+    ]
+
+
+### Response 403
+
+All routes can answer a 403 on authorization issues.
+
++ Response 403 (application/json)
+
+
+    "errors": [
+        {
+            "title": "Forbidden",
+            "detail": "You are not allowed to perform this action.",
+            "code": 403,
+            "status": 403
+        }
+    ]
+
+
+### Response 404
+
+All routes that require an identifier can answer a 404 if the identifier doesn't exist.
+
++ Response 404 (application/json)
+
+
+    "errors": [
+        {
+            "title": "Record not found",
+            "detail": "The record identified by <identifier> could not be found.",
+            "code": 404,
+            "status": 404
+        }
+    ]
+
+
+### Response 422
+
+All routes that require body can answer a 422 if the body can't be processed.
+
++ Response 422 (application/json)
+
+
+    "errors": [
+        {
+            "title": "Title of the error, example : can't be blank",
+            "detail": "Some detail, example: parameter-translations.customer-name - can't be blank",
+            "code": 100,
+            "source": {
+                "pointer": "Pointer to the entity/attribute that caused error, example : /data/attributes/parameter-translations.customer-name"
+            },
+            "status": 422
+        }
+    ]
