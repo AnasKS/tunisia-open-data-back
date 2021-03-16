@@ -31,4 +31,9 @@
 
 # Ignore coverage reports.
 /coverage/
+
+# Ignore spec tests result.
 /spec/examples.txt
+
+# Ignore data volume.
+/data/
