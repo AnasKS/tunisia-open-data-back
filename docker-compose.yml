@@ -3,13 +3,12 @@ version: '2'
 services:
   db:
     image: postgres
-    hostname: db
     restart: always
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
     volumes:
-      - /data:/var/lib/postgresql
+      - './data:/var/lib/postgresql'
     ports:
       - '5432:5432'
   api:
@@ -18,6 +17,7 @@ services:
       args:
         - RAILS_ENV=$RAILS_ENV
         - RAILS_PORT=3000
+        - POSTGRES_HOST=db
     ports:
       - '3000:3000'
     volumes:
